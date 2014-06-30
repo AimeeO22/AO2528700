@@ -5,7 +5,7 @@
  * Purpose: Gaddis 7thEd - Chapter 3 Homework Problem 3 - Test Average
  */
 
-//Sysytem Level Libraries
+//System Level Libraries
 
 #include <iostream>
 #include <iomanip>
@@ -24,20 +24,21 @@ int main(int argc, char** argv) {
     float t1, t2, t3, t4, t5, avg;
 //Initial Output
     cout<<"What is the first test score?"<<endl;
-    cin>>t1;
+    cin>>t1;//First test score
     cout<<"What is the second test score?"<<endl;
-    cin>>t2;
+    cin>>t2;//second test score
     cout<<"What is the third test score?"<<endl;
-    cin>>t3;
+    cin>>t3;//third test score
     cout<<"What is the fourth test score?"<<endl;
-    cin>>t4;
+    cin>>t4;//fourth test score
     cout<<"What is the fifth test score?"<<endl;
-    cin>>t5;
+    cin>>t5;//fifth test score
     //Calculations
-    avg=(t1+t2+t3+t4+t5)/5;
+    avg=(t1+t2+t3+t4+t5)/5;//average of the test scores
     //Final Output
     cout<<setprecision(1)<<fixed;
     cout<<"Average Test Score = "<<avg<<endl;
+    //Exit Stage Right
     return 0;
 }
 

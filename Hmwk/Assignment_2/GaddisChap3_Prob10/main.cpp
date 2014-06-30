@@ -24,7 +24,7 @@ int main(int argc, char** argv) {
     float cel, fah;
     //Initial Output
     cout<<"What is the temperature in degrees Celsius?"<<endl;
-    cin>>cel;
+    cin>>cel;//Celsius
     //Calculations
     fah=(cel*9/5)+32;
     //Final Output

@@ -5,10 +5,9 @@
  * Purpose: Gaddis 7thEd - Chapter 3 Homework Problem 1 - Miles Per Gallon
  */
 
-//Sysytem Level Libraries
+//System Level Libraries
 
 #include <iostream>
-#include <iomanip>
 using namespace std;
 
 //User Libraries
@@ -34,6 +33,7 @@ int main(int argc, char** argv) {
     
     //Final Output
     cout<<"Number of Miles Per Gallon of Gas = "<<mpg<<endl;
+    //Exit Stage Left
     return 0;
 }
 

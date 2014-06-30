@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Aimee Orozco-Perez
  * Created on June 26, 2014, 7:39 PM
- * Purpose: Gaddis 7thEd - Chapter 3 Homework Problem 9 - Automibile Costs
+ * Purpose: Gaddis 7thEd - Chapter 3 Homework Problem 9 - Automobile Costs
  */
 
 //System Level Libraries

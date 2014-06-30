@@ -26,22 +26,23 @@ int main(int argc, char** argv) {
     float nofi1, nofi2, nofi3, avg;
     //Initial Output
     cout<<"What is the name of the first month?"<<endl;
-    cin>>month1;
+    cin>>month1;//Name of first month
     cout<<"How many inches of rain fell in that month?"<<endl;
-    cin>>nofi1;
+    cin>>nofi1;//Number of inches in this month
     cout<<"What is the name of the second month?"<<endl;
-    cin>>month2;
+    cin>>month2;//Name of second month
     cout<<"How many inches of rain fell in that month?"<<endl;
-    cin>>nofi2;
+    cin>>nofi2;//Number of inches in this month
     cout<<"What is the name of the third month?"<<endl;
-    cin>>month3;
+    cin>>month3;//Name of third month
     cout<<"How many inches of rain fell in that month?"<<endl;
-    cin>>nofi3;
+    cin>>nofi3;//Number of inches in this month
     //Calculations
-    avg=(nofi1+nofi2+nofi3)/3;
+    avg=(nofi1+nofi2+nofi3)/3;//Average rainfall
     //Final Output
-    cout<<setprecision(2)<<fixed;
+    cout<<setprecision(2)<<fixed;//set decimal numbers after average
     cout<<"The average rainfall for "<<month1<<", "<<month2<<", and "<<month3<<" is "<<avg<<endl;
+    //Exit Stage Right
     return 0;
 }
 

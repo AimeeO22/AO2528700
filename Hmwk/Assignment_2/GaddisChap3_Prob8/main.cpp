@@ -24,11 +24,12 @@ int main(int argc, char** argv) {
     float rofb, minsu;
     //Initial Output
     cout<<"What is the replacement cost of the building?"<<endl;
-    cin>>rofb;
+    cin>>rofb;//replacement cost of building
     //Calculations
-    minsu=rofb*.8;
+    minsu=rofb*.8;//minimum insurance, based on the cost
     //Final Output
     cout<<"Minimum Insurance = "<<minsu<<endl;
+    //Exit stage right
     return 0;
 }
 

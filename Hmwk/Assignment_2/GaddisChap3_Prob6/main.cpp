@@ -28,8 +28,10 @@ int main(int argc, char** argv) {
     cout<<"How much does the pallet weigh by itself in pounds?"<<endl;
     cin>>wofp;//Weight of just the pallet itself
     //Calculations
-    nofw=(totw-wofp)/9.2;
+    nofw=(totw-wofp)/9.2;//Number of widgets = total weight/weight of one widget
+    //Final Output
     cout<<"Number of widgets = "<<nofw<<endl;
+    //Exit Stage Left
     return 0;
 }
 

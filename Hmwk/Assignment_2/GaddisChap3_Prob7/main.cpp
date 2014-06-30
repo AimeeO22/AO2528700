@@ -20,7 +20,9 @@ using namespace std;
 //Execution Begins Here
 
 int main(int argc, char** argv) {
+    //Declare Variables
     unsigned short nofc, cal;
+    //Initial Input
     cout<<"How many cookies did you eat?"<<endl;
     cin>>nofc;//Number of cookies eaten
     //Calculations

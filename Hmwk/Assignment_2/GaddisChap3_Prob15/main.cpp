@@ -21,11 +21,12 @@ using namespace std;
 
 int main(int argc, char** argv) {
     //Declare Variables
-    unsigned seed = time(0), y, x, z;
+    unsigned seed = time(0), y, x;//to generate the random number
+    int z;//the addition of the two numbers
     //Random Variables
     srand(seed);
-    y=1+rand()%300;
-    x=1+rand()%300;
+    y=1+rand()%300+100;//to make it between the range of 100-300
+    x=1+rand()%300+100;
     //Initial Output
     cout<<"Add the following two numbers: "<<endl;
     cout<<y<<endl;
@@ -37,6 +38,7 @@ int main(int argc, char** argv) {
     z=x+y;
     //Final Output
     cout<<z<<endl;
+    
     //Exit Stage Right
     return 0;
 }

@@ -29,46 +29,54 @@ int main(int argc, char** argv) {
     //Display the Menu
     cout<<"1. Problem One"<<endl;       //One: Minimum/Maximum
     cout<<"2. Problem Two"<<endl;       //Two: Roman Numeral Converter
-    cout<<"3. Problem Three"<<endl;     //Three:
-    cout<<"4. Problem Four"<<endl;
-    cout<<"5. Problem Five"<<endl;
-    cout<<"6. Problem Six"<<endl;
-    cout<<"7. Problem Seven"<<endl;
-    cout<<"8. Problem Eight"<<endl;
-    cout<<"9. Problem Nine"<<endl;
-    cout<<"10. Problem Ten"<<endl;
-    cout<<"\n";
-    cin>>choice;
-    cin.ignore();
+    cout<<"3. Problem Three"<<endl;     //Three: Magic Dates
+    cout<<"4. Problem Four"<<endl;      //Four: Area of Rectangles
+    cout<<"5. Problem Five"<<endl;      //Five: Body Mass Index
+    cout<<"6. Problem Six"<<endl;       //Six: Mass and weight
+    cout<<"7. Problem Seven"<<endl;     //Seven: Time Calculator
+    cout<<"8. Problem Eight"<<endl;     //Eight: Change for a dollar game
+    cout<<"9. Problem Nine"<<endl;      //Nine: Math Tutor
+    cout<<"10. Problem Ten"<<endl;      //Ten: Software Sales
+    cout<<"11. End Program"<<endl;      //Stop the loop
+    cout<<"\n";                         //create a space between blocks of text
+    cin>>choice;                        //get the choice from the user
+    cin.ignore();                       //Ignores the enter key afterwards
     
     //Switch Statement starts here
     switch (choice)
     {
-        case 1:
+        case 1:                         //First Problem
         {
-            cout<<"\n";
+            cout<<"\n";                 //Space after the choice number
             cout<<"Gaddis 7th Ed - Problem 1: Minimum/Maximum"<<endl;
-            int x, y;
+            //Declare Variables
+            int x=0, y=0;               //Random letters for the integer
+            //Initial Input
             cout<<"What is your first integer?"<<endl;
-            cin>>x;
-            cin.ignore();
+            cin>>x;                     //Variables one
+            cin.ignore();               //Ignores the enter key afterwards
             cout<<"What is the second integer?"<<endl;
-            cin>>y;
-            cin.ignore();
+            cin>>y;                      //Variable two
+            cin.ignore();               //Ignores the enter key afterwards
+            cout<<"\n";                 //Space so that numbers aren't confused
+            //Final Output
             (x<y)?(cout<<y<<" is bigger"<<endl<<endl):(cout<<x<<" is bigger"<<endl<<endl);
-            cout<<"Press Enter to continue\n";
-            cin.ignore();
+            //End of Problem One
+            cout<<"Press Enter to continue\n";//To start at the menu again
+            cin.ignore();               //Recognizes the enter key
                 break;
         }
-        case 2:
+        case 2:                         //Problem Two
         {
-            cout<<"\n";
+            cout<<"\n";                 //Space after choice number
             cout<<"Gaddis 7th Ed - Problem 2: Roman Numeral Converter"<<endl;
-            int numbr;
-            cout<<"Enter a number 1-10 to convert it into a roman numeral."<<endl;
-            cin>>numbr;
-            cin.ignore();
-            switch(numbr)
+            //Declare Variables
+            int numbr;                  //Number of 1-10
+            //Initial Input
+            cout<<"Enter a number 1-10 to convert it into a Roman numeral."<<endl;
+            cin>>numbr;                 //Get the number from user
+            cin.ignore();               //Ignores the enter key after
+            switch(numbr)               //Start of the switch for this problem
             {
            case 1:cout<<"Roman Numeral: I"<<endl;
                 break;
@@ -92,42 +100,56 @@ int main(int argc, char** argv) {
                 break;
             default:cout<<"You did not enter a number greater than 0 and less than 11"<<endl;
                 break;
+                //End of problem two
             }
-            cout<<"Press Enter to continue\n";
-            cin.ignore();
+            cout<<"\n";                    //Space after end of problem
+            cout<<"Press Enter to continue\n";//Start from menu again
+            cin.ignore();                  //recognizes enter key
                 break;
         }
-        case 3:
+        case 3:                            //Problem three
         {
-            cout<<"\n";
-            cout<<"Gaddis 7th Ed - Problem 3: Magic Dates/n";
+            cout<<"\n";                   //space after the choice
+            cout<<"Gaddis 7th Ed - Problem 3: Magic Dates\n";
+            //Declare variables
             unsigned short month, day, yr;
+            //Initial Input
             cout<<"Enter a month in numeric form."<<endl;
             cin>>month;
+            cin.ignore();                   //Ignores enter key after
             cout<<"Enter the day."<<endl;
             cin>>day;
+            cin.ignore();                   //Ignores enter key after
             cout<<"Enter the last two digits of the year."<<endl;
             cin>>yr;
-            if (yr==month*day)
+            cin.ignore();                   //ignores enter key after
+            //start the if statement
+            if (yr==month*day)              //calculation
             {
             cout<<"It is a magic date!"<<endl;
             }
-            if (yr!=month*day)
+            if (yr!=month*day)              //calculation
             {
             cout<<"It is not magic."<<endl;
             }
-            cout<<"Press Enter to continue\n";
-            cin.ignore();
+            //End of problem 3
+            cout<<"\n";                     //Space after answer
+            cout<<"Press Enter to continue."<<endl;//start from menu
+            cin.ignore();                   //recognizes enter key
                 break;
         }
-        case 4:
+        case 4:                             //Problem Four
         {
-            cout<<"\n";
+            cout<<"\n";                     //Space after choice
             cout<<"Gaddis 7th Ed - Problem 4: Area of rectangles"<<endl;
-            int leg1, leg2, wid1, wid2, area1, area2;
+            //Declare variables
+            int leg1, leg2;                 //length of the two rectangles
+            int wid1, wid2;                 //width of two rectangles
+            int area1, area2;               //area of both rectangles
+            //Initial Input
             cout<<"What is the length of the first rectangle?"<<endl;
             cin>>leg1;
-            cin.ignore();
+            cin.ignore();                   //Ignores the enter key after
             cout<<"What is the width of the first rectangle?"<<endl;
             cin>>wid1;
             cin.ignore();
@@ -137,32 +159,34 @@ int main(int argc, char** argv) {
             cout<<"What is the width of the second rectangle?"<<endl;
             cin>>wid2;
             cin.ignore();
-            //calculations
+            //Calculations
             area1=leg1*wid1;
             area2=leg2*wid2;
-            if (area1>area2)
+            //Start the if statement
+            if (area1>area2)                //if area of the first rect. is bigger
             {
             cout<<"The area of the first rectangle is bigger than the second."<<endl;
             }
-            else if (area2>area1)
+            else if (area2>area1)           //if area of second rectangle is bigger
             {
             cout<<"The area of the second rectangle is bigger than the first."<<endl;
             }
-            else if (area2==area1)
+            else if (area2==area1)          //if both rectangles have the same area
             {        
             cout<<"These rectangles have the same area."<<endl;
             }
+            //End of problem 4
             cout<<"Press Enter to continue\n";
             cin.ignore();
                 break;
         }
-        case 5:
+        case 5:                             //Problem 5
         {
-            cout<<"\n";
+            cout<<"\n";                     //Space after choice number
             cout<<"Gaddis 7th Ed - Problem 5: BMI"<<endl;
             //Display Variables
-            unsigned short weight, height;
-            float bmi;
+            unsigned short weight, height; //the integers from user
+            float bmi;                      //result after the calculations
             //Initial Input
             cout<<"What is your weight in pounds?"<<endl;
             cin>>weight;
@@ -172,30 +196,32 @@ int main(int argc, char** argv) {
             cin.ignore();
             //Calculations
             bmi=(weight*703)/pow(height, 2.0);
-            cout<<setprecision(2)<<fixed<<endl;
-            if (bmi>25)
+            cout<<setprecision(2)<<fixed<<endl;//sets the decimal points
+            //Start of if statement
+            if (bmi>25)                         //if bmi is bigger than 25
             {
             cout<<"You are overweight according to your BMI: "<<bmi<<endl;
             }
-            else if (bmi<18.5)
+            else if (bmi<18.5)                  //if bmi is less than 18.5
             {
             cout<<"You are underweight according to your BMI: "<<bmi<<endl;
             }
-            else if (25>bmi<18.5)
+            else if (25>bmi<18.5)               //if bmi is in between the two
             {
             cout<<"You have optimal weight according to your BMI: "<<bmi<<endl;
             }
-            cout<<"Press Enter to continue\n";
-            cin.ignore();
+            //End of Problem 5
+            cout<<"Press Enter to continue\n";  //Prompts user to start menu
+            cin.ignore();                       //recognizes enter key
                  break;
         }
-        case 6:
+        case 6:                                 //problem 6
         {
             cout<<"\n";
             cout<<"Gaddis 7th Ed - Problem 6 Mass and Weight"<<endl;
             //Display Variables
-            unsigned short mass;
-            float wt;
+            unsigned short mass;                //mass of the object in kg
+            float wt;                           //weight of object in Newtons
             //Initial Input
             cout<<"What is the object's mass in kilograms?"<<endl;
             cin>>mass;
@@ -203,12 +229,12 @@ int main(int argc, char** argv) {
             //Calculations
             wt=mass*9.8;
             //Final Output
-            cout<<setprecision(2)<<fixed<<endl;
-            if (wt>1000)
+            cout<<setprecision(2)<<fixed<<endl;//Keeps decimal points to two places
+            if (wt>1000)                    //weight calculated is bigger than 1000
             {
             cout<<"This object is too heavy."<<endl;
             }
-            else if (wt<10)
+            else if (wt<10)                 //weight calculated is less than 10
             {
             cout<<"This object is too light."<<endl;
             }
@@ -216,56 +242,66 @@ int main(int argc, char** argv) {
             {
             cout<<"The object's weight in Newtons is "<<wt<<endl;
             }
+            //End of problem 6
             cout<<"Press Enter to continue\n";
             cin.ignore();
                 break;
         }
-        case 7:
+        case 7:                         //Start of Problem 7
         {
             cout<<"\n";
             cout<<"Gaddis 7th Ed - Problem 7: Time Calculator\n";
-            short sec;
-            float min, hr, dys;
+            //Declare Variables
+            float sec, min, hr, dys;
+            //Initial Input
             cout<<"Enter a number of seconds"<<endl;
             cin>>sec;
             cin.ignore();
-            cout<<setprecision(2)<<fixed;
-            if (sec>=60 && sec<3600 )
+            cout<<setprecision(0)<<fixed;   //makes it so there are no decimals
+            if (sec>=60 && sec<3600)
             {
-            min=sec/60;
+            min=sec/6e1;
             cout<<"You entered "<<min<<" minute(s)"<<endl;
             }
             else if (sec>=3600 && sec<86400)
             {
-            hr=sec/3600;
+            hr=sec/3.6e3;
             cout<<"you entered "<<hr<<" hour(s)"<<endl;
             }
             else if (sec>=86400)
             {
-            dys=sec/86400;
+            dys=sec/8.64e4;
             cout<<"You entered "<<dys<<" day(s)"<<endl;
             }
-            cout<<"Press Enter to continue\n";
+            else
+            {
+                cout<<"You entered "<<sec<<" second(s)"<<endl;
+            }
+            //End of Problem 7
+            cout<<"Press Enter to continue."<<endl;
             cin.ignore();
                 break;
         }
-        case 8:
+        case 8:                         //Start of problem 8
         {
             cout<<"\n";
             cout<<"Gaddis 7th Ed - Problem 8: Change for a Dollar Game.\n";
+            //Declare variables
             unsigned short pen, nik, dime, qtr;
+            //Initial Input
             cout<<"Enter the number of pennies.\n";
-            cin>>pen;
+            cin>>pen;                   //Pennies
             cin.ignore();
             cout<<"Enter the number of nickels.\n";
-            cin>>nik;
+            cin>>nik;                   //Nickel
             cin.ignore();
             cout<<"Enter the number of dimes.\n";
-            cin>>dime;
+            cin>>dime;                  //Dimes
             cin.ignore();
             cout<<"Enter the number of quarters.\n";
-            cin>>qtr;
+            cin>>qtr;                   //Quarters
             cin.ignore();
+            //Calculations and Output
             if ((pen*1)+(nik*5)+(dime*10)+(qtr*25)==100)
             {
             cout<<"Congratulations you won the game!\n";
@@ -278,11 +314,12 @@ int main(int argc, char** argv) {
             {
             cout<<"You entered more than a dollar.\n";
             }
+            //End of Problem 8
             cout<<"Press Enter to continue\n";
             cin.ignore();
                 break;
         }
-        case 9:
+        case 9:                         //Start of Problem 9
         {
             cout<<"\n";
             cout<<"Gaddis 7th Ed - Problem 9: Math Tutor.\n";
@@ -304,19 +341,20 @@ int main(int argc, char** argv) {
             //Calculations
             z=f+t;
             //Final Output
-            if (z==a)
+            if (z==a)                       //If the two answers are the same
             {
                 cout<<"Congratulations that is correct!\n";
             }
-            else if (z!=a)
+            else if (z!=a)                  //If the user's answer is wrong
             {
                 cout<<"The correct answer is "<<z<<endl;
             }
+            //End of problem 9
             cout<<"Press Enter to continue\n";
             cin.ignore();
                 break;
         }
-        case 10:
+        case 10:                            //Start of Problem 10
         {
             cout<<"\n";
             cout<<"Gaddis 7th Ed - Problem 10: Software sales.\n";
@@ -326,49 +364,62 @@ int main(int argc, char** argv) {
             cout<<"What are the number of units sold?\n";
             cin>>qty;
             cin.ignore();
-            cout<<setprecision(2)<<fixed;
-            if (qty>=1 && qty<=9)
+            cout<<setprecision(2)<<fixed;   //Decimals set to two places
+            //Start of if statement; Output
+            if (qty>=1 && qty<=9)           //Range of quantity
             {
+                //Calculations with no discount
             totcost=qty*99;
             cout<<"The total cost of your purchase: $"<<totcost<<endl;
             }
             else if (qty>=10 && qty<=19)
             {
-            totcost=(qty*99)*.80;
+                //Calculations with 20% discount
+            totcost=(qty*99)*8.0e-1;
             cout<<"The total cost of your purchase: $"<<totcost<<endl;
             }
             else if (qty>=20 && qty<=49)
             {
-            totcost=(qty*99)*.70;
+                //Calculations with 30% discount
+            totcost=(qty*99)*7.0e-1;
             cout<<"The total cost of your purchase: $"<<totcost<<endl;
             }
             else if (qty>=50 && qty<=99)
             {
-            totcost=(qty*99)*.60;
+                //Calculations with 40% discount
+            totcost=(qty*99)*6.0e-1;
             cout<<"The total cost of your purchase: $"<<totcost<<endl;
             }
             else if (qty>100)
             {
-            totcost=(qty*99)*.50;
+                //Calculations with 50% discount
+            totcost=(qty*99)*5.0e-1;
             cout<<"The total cost of your purchase: $"<<totcost<<endl;
             }
             else if (qty<=0)
             {
             cout<<"You entered a number less than 1. Try again."<<endl;
             }
+            //End of problem 10
             cout<<"Press Enter to continue\n";
             cin.ignore();
                 break;
         }
-        default:
+        case 11:                        //Ends the program
         {
             cout<<"\n";
-            cout<<"You entered a number not on the list. Please try again.\n";
+            cout<<"Thank you.\n";
+                break;
+        }
+        default:                      //ends program if number is not on the list
+        {
+            cout<<"\n";
+            cout<<"You entered a number not on the list. Please try again."<<endl;
                 break;
         }
       }
     }
-            
+         //Exit stage   
 return 0;
 
 }

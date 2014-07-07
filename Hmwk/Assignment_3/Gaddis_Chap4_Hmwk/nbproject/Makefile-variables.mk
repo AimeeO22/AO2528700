@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=Cygwin_4.x-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin_4.x-Windows
-CND_ARTIFACT_NAME_Debug=gaddischap4_prob1
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/gaddischap4_prob1
+CND_ARTIFACT_NAME_Debug=gaddis_chap4_hmwk
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/gaddis_chap4_hmwk
 CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin_4.x-Windows/package
-CND_PACKAGE_NAME_Debug=gaddischap4prob1.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/package/gaddischap4prob1.tar
+CND_PACKAGE_NAME_Debug=gaddischap4hmwk.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/package/gaddischap4hmwk.tar
 # Release configuration
 CND_PLATFORM_Release=Cygwin_4.x-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/Cygwin_4.x-Windows
-CND_ARTIFACT_NAME_Release=gaddischap4_prob1
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin_4.x-Windows/gaddischap4_prob1
+CND_ARTIFACT_NAME_Release=gaddis_chap4_hmwk
+CND_ARTIFACT_PATH_Release=dist/Release/Cygwin_4.x-Windows/gaddis_chap4_hmwk
 CND_PACKAGE_DIR_Release=dist/Release/Cygwin_4.x-Windows/package
-CND_PACKAGE_NAME_Release=gaddischap4prob1.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin_4.x-Windows/package/gaddischap4prob1.tar
+CND_PACKAGE_NAME_Release=gaddischap4hmwk.tar
+CND_PACKAGE_PATH_Release=dist/Release/Cygwin_4.x-Windows/package/gaddischap4hmwk.tar
 #
 # include compiler specific variables
 #

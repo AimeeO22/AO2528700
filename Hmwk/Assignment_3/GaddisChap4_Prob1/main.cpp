@@ -172,7 +172,7 @@ int main(int argc, char** argv) {
     {
         cout<<"The object's weight in Newtons is "<<wt<<endl;
     }
- */
+ 
     unsigned short month, day, yr;
     cout<<"Enter a month in numeric form."<<endl;
     cin>>month;
@@ -187,6 +187,90 @@ int main(int argc, char** argv) {
     if (yr!=month*day)
     {
         cout<<"It is not magic."<<endl;
+    }
+ 
+    //Time Calculator
+    short sec;
+    float min, hr, dys;
+    cout<<"Enter a number of seconds"<<endl;
+    cin>>sec;
+    //cout<<setprecision(0)<<fixed;
+    if (sec>=60 && sec<3600 )
+    {
+        min=sec/60;
+        cout<<"You entered "<<min<<" minute(s)"<<endl;
+    }
+    else if (sec>=3600 && sec<86400)
+    {
+        hr=sec/3600;
+        cout<<"you entered "<<hr<<" hour(s)"<<endl;
+    }
+    else if (sec>=86400)
+    {
+        dys=sec/86400;
+        cout<<"You entered "<<dys<<" day(s)"<<endl;
+    }
+ 
+    unsigned short pen, nik, dime, qtr;
+    cout<<"Enter the number of pennies.\n";
+    cin>>pen;
+    cin.ignore();
+    cout<<"Enter the number of nickels.\n";
+    cin>>nik;
+    cin.ignore();
+    cout<<"Enter the number of dimes.\n";
+    cin>>dime;
+    cin.ignore();
+    cout<<"Enter the number of quarters.\n";
+    cin>>qtr;
+    cin.ignore();
+    if ((pen*1)+(nik*5)+(dime*10)+(qtr*25)==100)
+    {
+        cout<<"Congratulations you won the game!\n";
+    }
+    else if ((pen*1)+(nik*5)+(dime*10)+(qtr*25)<100)
+    {
+        cout<<"You entered less than one dollar.\n";
+    }
+    else if (100<(pen*1)+(nik*5)+(dime*10)+(qtr*25))
+    {
+        cout<<"You entered more than a dollar.\n";
+    }
+ */
+    unsigned short qty=0;
+    float totcost;
+    cout<<"What are the number of units sold?\n";
+    cin>>qty;
+    cin.ignore();
+    cout<<setprecision(2)<<fixed;
+    if (qty>=1 && qty<=9)
+    {
+        totcost=qty*99;
+        cout<<"The total cost of your purchase: $"<<totcost<<endl;
+    }
+    else if (qty>=10 && qty<=19)
+    {
+        totcost=(qty*99)*.80;
+        cout<<"The total cost of your purchase: $"<<totcost<<endl;
+    }
+    else if (qty>=20 && qty<=49)
+    {
+        totcost=(qty*99)*.70;
+        cout<<"The total cost of your purchase: $"<<totcost<<endl;
+    }
+    else if (qty>=50 && qty<=99)
+    {
+        totcost=(qty*99)*.60;
+        cout<<"The total cost of your purchase: $"<<totcost<<endl;
+    }
+    else if (qty>100)
+    {
+        totcost=(qty*99)*.50;
+        cout<<"The total cost of your purchase: $"<<totcost<<endl;
+    }
+    else if (qty<=0)
+    {
+        cout<<"You entered a number less than 1. Try again."<<endl;
     }
     return 0;
     

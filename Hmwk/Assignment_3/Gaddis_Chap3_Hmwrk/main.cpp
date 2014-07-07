@@ -128,7 +128,7 @@ int main(int argc, char** argv) {
             {
             cout<<"It is a magic date!"<<endl;
             }
-            if (yr!=month*day)              //calculation
+            else
             {
             cout<<"It is not magic."<<endl;
             }

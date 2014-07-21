@@ -390,7 +390,7 @@ int main(int argc, char** argv) {
             totcost=(qty*99)*6.0e-1;
             cout<<"The total cost of your purchase: $"<<totcost<<endl;
             }
-            else if (qty>100)
+            else if (qty>=100)
             {
                 //Calculations with 50% discount
             totcost=(qty*99)*5.0e-1;

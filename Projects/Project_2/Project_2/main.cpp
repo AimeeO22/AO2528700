@@ -22,7 +22,15 @@ int main(int argc, char** argv) {
     ifstream inputFile;
     string name;
     inputFile.open("demofile.txt");
-    cout<<"Reading file, practice 2\n";
+    cout<<"Reading file, practice 3\n";
+    if (inputFile.fail())
+    {
+        cout<<"error\n";
+    }
+    else
+    {
+        //process file
+    }
     inputFile>>name;
     cout<<name<<endl;
     inputFile>>name;

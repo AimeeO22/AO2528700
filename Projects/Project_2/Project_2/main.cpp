@@ -11,7 +11,7 @@
 using namespace std;
 
 int main(int argc, char** argv) {
-
+//I dont know what game to make now -.- blackjack? a sim game? idk
     ofstream outputFile;
     outputFile. open("demofile.txt");
     cout<<"Practice 1"<<endl;

@@ -9,6 +9,10 @@
 #include <fstream>
 #include <iostream>
 using namespace std;
+//Function Prototypes
+void first();
+void second();
+
 
 int main(int argc, char** argv) {
 //I dont know what game to make now -.- blackjack? a sim game? idk
@@ -40,6 +44,17 @@ int main(int argc, char** argv) {
     inputFile>>name;
     cout<<name<<endl;
     inputFile.close();
+    second();
+    cout<<"Function Main\n";
     return 0;
 }
-
+void first()
+    {
+        cout<<"This is from a function prototype\n";
+    }
+void second()
+{
+    cout<<"Second function\n";
+    first();
+    cout<<"Back again\n";
+}

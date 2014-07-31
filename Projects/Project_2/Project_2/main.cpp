@@ -10,6 +10,7 @@
 #include <iostream>		
 #include <ctime>		//for random seed
 #include <iomanip>
+#include <string>
 using namespace std;
 
 //User Libraries
@@ -38,6 +39,23 @@ int main(int argc, char** argv) {
     g=1+rand()%9+1;                     //computer
     h=1+rand()%9+1;                     //player
     mssg();
+    ofstream outputFile;
+    outputFile.open("Rules.txt");
+    outputFile<<"Rules of the Game! "
+            "It's very simple:\n "
+            "Your objective is to try to reach\n"
+            "21 without going over,\n"
+            "also known as busting.\n"
+            "However, don't play too cautiously!\n"
+            "If the dealer (that's me!)"
+            "gets higher than you without busting\n"
+            "then you lose. Ready? Let's go!"<<endl;
+    outputFile.close();
+    ifstream inputFile;
+    string rules;
+    inputFile.open("Rules.txt");
+    inputFile.close();
+    cout<<rules<<endl;
     do
     {
     cout<<"1. Play Game\n"
@@ -806,11 +824,7 @@ int main(int argc, char** argv) {
 
 void mssg()
 {
-    cout<<"Welcome to Blackjack!\nThe rules "
-            <<"of the game are simple.\n"
-            <<"Try to get to 21 without going over,\n"
-            <<"and without going under the dealer "
-            <<"(that's me!)\nReady? Let's Go!\n";
+    cout<<"Welcome to Blackjack!\n";
 }
 
 void uwin()

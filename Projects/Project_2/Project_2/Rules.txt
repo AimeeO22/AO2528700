@@ -1,0 +1,7 @@
+Rules of the Game! It's very simple:
+ Your objective is to try to reach
+21 without going over,
+also known as busting.
+However, don't play too cautiously!
+If the dealer (that's me!)gets higher than you without busting
+then you lose. Ready? Let's go!

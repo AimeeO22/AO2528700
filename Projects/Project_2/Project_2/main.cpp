@@ -6,9 +6,10 @@
  */
 
 #include <cstdlib>
-#include <fstream>
-#include <iostream>
-#include <vector>
+#include <fstream>		//for writing and reading from a file
+#include <iostream>		
+#include <cmath>		//for random seed
+#include <iomanip>
 using namespace std;
 
 //User Libraries
@@ -20,10 +21,9 @@ void mssg();
 //Execution Begins Here
 
 int main(int argc, char** argv) {
-    //char cardk [52, '1'];           //contains the deck of cards
-    unsigned short a, b, c, d, e, f, g, h;//1-10 the cards of face value
-    unsigned int choice=0;//yes or no variable
-    unsigned seed=time(0);
+    unsigned short a, b, c, d, e, f, g, h;	//1-10 the cards of face value
+    unsigned int choice=0, choice2=0;	//yes or no variable
+    unsigned seed=time(0);		//random seed
     srand(seed);
     a=1+rand()%9+1;
     b=1+rand()%9+1;
@@ -34,6 +34,15 @@ int main(int argc, char** argv) {
     g=1+rand()%9+1;
     h=1+rand()%9+1;
     mssg();
+    do
+    {
+    cout<<"1. Play Game\n"
+    <<"2. Quit Game\n";
+    cin>>choice2;
+    switch (choice2)
+    {
+    case 1:
+    {
     cout<<"Computer Cards: "<<a<<endl;
     cout<<"Player Cards: "<<c<<" "<<d<<endl;
     cout<<"Hit? \n 1.Yes \n 2.No"<<endl;
@@ -42,13 +51,18 @@ int main(int argc, char** argv) {
         {
             case 1:
             {
-                cout<<"Player cards: \n"<<c
+                cout<<"Player cards: "<<c
                 <<" "<<d<<" "<<e<<endl;
                 cout<<"Computer Cards: "<<a<<endl;
                 if (c+d+e>21)
                 {
                     cout<<"You went over 21. You lose.\n";
+	    return 0;
                 }
+	else if (c+d+e<21 && a+b<c+d+e)
+	{
+	   cout<<"Congratulations you won!"<<endl;
+	}
                 else
                 {
                 cout<<"Player Cards: "<<c<<" "<<d<<" "<<e<<endl;
@@ -63,7 +77,6 @@ int main(int argc, char** argv) {
                             if (c+d+e+h>21)
                             {
                                 cout<<"You went over 21. You lose.\n";
-                                return 0;
                             }
                             else if (c+d+e+h>a+b && c+d+e+h<22)
                             {
@@ -187,7 +200,17 @@ int main(int argc, char** argv) {
     }
    }
   }       
+}
+        break;
+    }
+        case 2:
+        {
+            cout<<"Thank you for playing!\n";
+            break;
         }
+    }
+
+        }while (choice2==1);
     return 0;
 }
 void mssg()
@@ -196,5 +219,5 @@ void mssg()
             <<"of the game are simple.\n"
             <<"Try to get to 21 without going over,\n"
             <<"and without going under the dealer "
-            <<"(that's me!) Ready?\n";
+            <<"(that's me!) Ready? Let's Go!\n";
 }

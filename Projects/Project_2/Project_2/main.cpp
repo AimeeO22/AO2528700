@@ -8,16 +8,20 @@
 #include <cstdlib>
 #include <fstream>		//for writing and reading from a file
 #include <iostream>		
-#include <cmath>		//for random seed
+#include <ctime>		//for random seed
 #include <iomanip>
 using namespace std;
 
 //User Libraries
 
 //Global Constants
-
+unsigned short a, b, c, d, e, f, g, h;	//1-10 the cards of face value
+    unsigned int choice=0, choice2=0;	//yes or no variable
+    unsigned seed=time(0);
 //Function Prototypes
 void mssg();
+void uwin();
+void iwin();
 //Execution Begins Here
 
 int main(int argc, char** argv) {
@@ -25,14 +29,14 @@ int main(int argc, char** argv) {
     unsigned int choice=0, choice2=0;	//yes or no variable
     unsigned seed=time(0);		//random seed
     srand(seed);
-    a=1+rand()%9+1;
-    b=1+rand()%9+1;
-    c=1+rand()%9+1;
-    d=1+rand()%9+1;
-    e=1+rand()%9+1;
-    f=1+rand()%9+1;
-    g=1+rand()%9+1;
-    h=1+rand()%9+1;
+    a=1+rand()%9+1;                     //computer
+    b=1+rand()%9+1;                     //computer
+    c=1+rand()%9+1;                     //player
+    d=1+rand()%9+1;                     //player
+    e=1+rand()%9+1;                     //player
+    f=1+rand()%9+1;                     //computer
+    g=1+rand()%9+1;                     //computer
+    h=1+rand()%9+1;                     //player
     mssg();
     do
     {
@@ -54,15 +58,318 @@ int main(int argc, char** argv) {
                 cout<<"Player cards: "<<c
                 <<" "<<d<<" "<<e<<endl;
                 cout<<"Computer Cards: "<<a<<endl;
-                if (c+d+e>21)
+
+                    if (a+b<=15)
                 {
-                    cout<<"You went over 21. You lose.\n";
-	    return 0;
+            a+b+f;
+            if (a+b+f<=15)
+            {
+                a+b+f+g;
+            
+        
+    if (a+b==21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"I win."<<endl;
+    }
+    else if (a+b+f==21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"I win."<<endl;
+    }
+    else if (a+b+f+g==21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<" "<<g<<endl;
+        cout<<"I win."<<endl;
+    }
+    else if(c+d==21 || c+d+e==21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"You Win."<<endl;
+    }
+    else if (c+d>a+b+f && c+d<=21)//
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"You win"<<endl;
+    }
+    else if (c+d>a+b+f+g && c+d<=21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"You win"<<endl;
+    }
+    else if (c+d<a+b && a+b<=21)//duplicated
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"I win"<<endl;
+    }
+    else if (a+b+f>c+d && a+b+f<=21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"I win"<<endl;   
+    }
+    else if (a+b+f+g>c+d && a+b+f+g<=21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<" "<<g<<endl;
+        cout<<"I win"<<endl; 
+    }
+    else if (c+d>a+b && c+d<=21)//duplicated
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"You win"<<endl;
+    }
+    else if (c+d+e>a+b && c+d+e<=21)//duplicated
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"You Win"<<endl;
+    }
+    else if (c+d+e>a+b+f+g && c+d+e<=21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<" "<<g<<endl;
+        cout<<"You Win"<<endl;
+    }
+    else if (c+d+e>a+b+f && c+d+e<=21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"You Win"<<endl;
+    }
+    else if (c+d+e>21)
+    {
+        cout<<"You scored higher than 21. You lose."<<endl;
+    }
+    else if (a+b==c+d+e || a+b==c+d)//duplicate
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"It's a draw."<<endl;
+    }
+    else if (a+b+f==c+d+e || a+b+f==c+d)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"It's a draw."<<endl;
+    }
+    else if (a+b+f+g==c+d+e || a+b+f+g==c+d)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<" "<<g<<endl;
+        cout<<"It's a draw."<<endl;
+    }
+   }
+  }
+                    
+            else if (c+d+e<21 && a+b<c+d+e)
+                {
+                cout<<"Player Cards: "<<c<<" "<<d<<" "<<e<<endl;
+                cout<<"Hit? \n 1.Yes \n 2.No"<<endl;
+                cin>>choice;
+                    switch (choice)
+                    {
+                        case 1:
+                        {
+                            cout<<"Player cards: \n"<<c
+                            <<" "<<d<<" "<<e<<" "<<h<<endl;
+                            if (a+b<=15)
+        {
+            a+b+f;
+            if (a+b+f<=15)
+            {
+                a+b+f+g;
+            
+        
+    if (a+b==21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"I win."<<endl;
+    }
+    else if (a+b+f==21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"I win."<<endl;
+    }
+    else if (a+b+f+g==21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<" "<<g<<endl;
+        cout<<"I win."<<endl;
+    }
+    else if(c+d==21 || c+d+e==21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"You Win."<<endl;
+    }
+    else if (c+d>a+b+f && c+d<=21)//
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"You win"<<endl;
+    }
+    else if (c+d>a+b+f+g && c+d<=21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"You win"<<endl;
+    }
+    else if (c+d<a+b && a+b<=21)//duplicated
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"I win"<<endl;
+    }
+    else if (a+b+f>c+d && a+b+f<=21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"I win"<<endl;   
+    }
+    else if (a+b+f+g>c+d && a+b+f+g<=21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<" "<<g<<endl;
+        cout<<"I win"<<endl; 
+    }
+    else if (c+d>a+b && c+d<=21)//duplicated
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"You win"<<endl;
+    }
+    else if (c+d+e>a+b && c+d+e<=21)//duplicated
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"You Win"<<endl;
+    }
+    else if (c+d+e>a+b+f+g && c+d+e<=21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<" "<<g<<endl;
+        cout<<"You Win"<<endl;
+    }
+    else if (c+d+e>a+b+f && c+d+e<=21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"You Win"<<endl;
+    }
+    else if (c+d+e>21)
+    {
+        cout<<"You scored higher than 21. You lose."<<endl;
+    }
+    else if (a+b==c+d+e || a+b==c+d)//duplicate
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"It's a draw."<<endl;
+    }
+    else if (a+b+f==c+d+e || a+b+f==c+d)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"It's a draw."<<endl;
+    }
+    else if (a+b+f+g==c+d+e || a+b+f+g==c+d)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<" "<<g<<endl;
+        cout<<"It's a draw."<<endl;
+    }
+   }
+  }
+                            if (c+d+e+h>21)
+                            {
+                                iwin();
+                            }
+                            else if (c+d+e+h>a+b && c+d+e+h<22)
+                            {
+                                uwin();
+                            }
+                            else if (a+b>c+d+e+h && a+b<22)
+                            {
+                                iwin();
+                            }
+                            break;
+                        }
+                    }
+                if (a+b<=15)
+        {
+            a+b+f;
+            if (a+b+f<=15)
+            {
+                a+b+f+g;
+            
+        
+    if (a+b==21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"I win."<<endl;
+    }
+    else if (a+b+f==21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"I win."<<endl;
+    }
+    else if (a+b+f+g==21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<" "<<g<<endl;
+        cout<<"I win."<<endl;
+    }
+    else if(c+d==21 || c+d+e==21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"You Win."<<endl;
+    }
+    else if (c+d>a+b+f && c+d<=21)//
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"You win"<<endl;
+    }
+    else if (c+d>a+b+f+g && c+d<=21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"You win"<<endl;
+    }
+    else if (c+d<a+b && a+b<=21)//duplicated
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"I win"<<endl;
+    }
+    else if (a+b+f>c+d && a+b+f<=21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"I win"<<endl;   
+    }
+    else if (a+b+f+g>c+d && a+b+f+g<=21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<" "<<g<<endl;
+        cout<<"I win"<<endl; 
+    }
+    else if (c+d>a+b && c+d<=21)//duplicated
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"You win"<<endl;
+    }
+    else if (c+d+e>a+b && c+d+e<=21)//duplicated
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"You Win"<<endl;
+    }
+    else if (c+d+e>a+b+f+g && c+d+e<=21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<" "<<g<<endl;
+        cout<<"You Win"<<endl;
+    }
+    else if (c+d+e>a+b+f && c+d+e<=21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"You Win"<<endl;
+    }
+    else if (c+d+e>21)
+    {
+        cout<<"You scored higher than 21. You lose."<<endl;
+    }
+    else if (a+b==c+d+e || a+b==c+d)//duplicate
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"It's a draw."<<endl;
+    }
+    else if (a+b+f==c+d+e || a+b+f==c+d)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"It's a draw."<<endl;
+    }
+    else if (a+b+f+g==c+d+e || a+b+f+g==c+d)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<" "<<g<<endl;
+        cout<<"It's a draw."<<endl;
+    }
+   }
+  }
+                uwin();
                 }
-	else if (c+d+e<21 && a+b<c+d+e)
-	{
-	   cout<<"Congratulations you won!"<<endl;
-	}
                 else
                 {
                 cout<<"Player Cards: "<<c<<" "<<d<<" "<<e<<endl;
@@ -74,17 +381,111 @@ int main(int argc, char** argv) {
                         {
                             cout<<"Player cards: \n"<<c
                             <<" "<<d<<" "<<e<<" "<<h<<endl;
+                            if (a+b<=15)
+        {
+            a+b+f;
+            if (a+b+f<=15)
+            {
+                a+b+f+g;
+            
+        
+    if (a+b==21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"I win."<<endl;
+    }
+    else if (a+b+f==21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"I win."<<endl;
+    }
+    else if (a+b+f+g==21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<" "<<g<<endl;
+        cout<<"I win."<<endl;
+    }
+    else if(c+d==21 || c+d+e==21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"You Win."<<endl;
+    }
+    else if (c+d>a+b+f && c+d<=21)//
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"You win"<<endl;
+    }
+    else if (c+d>a+b+f+g && c+d<=21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"You win"<<endl;
+    }
+    else if (c+d<a+b && a+b<=21)//duplicated
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"I win"<<endl;
+    }
+    else if (a+b+f>c+d && a+b+f<=21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"I win"<<endl;   
+    }
+    else if (a+b+f+g>c+d && a+b+f+g<=21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<" "<<g<<endl;
+        cout<<"I win"<<endl; 
+    }
+    else if (c+d>a+b && c+d<=21)//duplicated
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"You win"<<endl;
+    }
+    else if (c+d+e>a+b && c+d+e<=21)//duplicated
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"You Win"<<endl;
+    }
+    else if (c+d+e>a+b+f+g && c+d+e<=21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<" "<<g<<endl;
+        cout<<"You Win"<<endl;
+    }
+    else if (c+d+e>a+b+f && c+d+e<=21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"You Win"<<endl;
+    }
+    else if (c+d+e>21)
+    {
+        cout<<"You scored higher than 21. You lose."<<endl;
+    }
+    else if (a+b==c+d+e || a+b==c+d)//duplicate
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"It's a draw."<<endl;
+    }
+    else if (a+b+f==c+d+e || a+b+f==c+d)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"It's a draw."<<endl;
+    }
+    else if (a+b+f+g==c+d+e || a+b+f+g==c+d)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<" "<<g<<endl;
+        cout<<"It's a draw."<<endl;
+    }
+   }
+  }
                             if (c+d+e+h>21)
                             {
-                                cout<<"You went over 21. You lose.\n";
+                                iwin();
                             }
                             else if (c+d+e+h>a+b && c+d+e+h<22)
                             {
-                                cout<<"You Win!\n";
+                                uwin();
                             }
                             else if (a+b>c+d+e+h && a+b<22)
                             {
-                                cout<<"I win\n";
+                                iwin();
                             }
                             break;
                         }
@@ -92,6 +493,100 @@ int main(int argc, char** argv) {
                         {
                             cout<<"player cards: \n"<<c
                             <<" "<<d<<" "<<e<<endl;
+                            if (a+b<=15)
+        {
+            a+b+f;
+            if (a+b+f<=15)
+            {
+                a+b+f+g;
+            
+        
+    if (a+b==21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"I win."<<endl;
+    }
+    else if (a+b+f==21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"I win."<<endl;
+    }
+    else if (a+b+f+g==21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<" "<<g<<endl;
+        cout<<"I win."<<endl;
+    }
+    else if(c+d==21 || c+d+e==21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"You Win."<<endl;
+    }
+    else if (c+d>a+b+f && c+d<=21)//
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"You win"<<endl;
+    }
+    else if (c+d>a+b+f+g && c+d<=21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"You win"<<endl;
+    }
+    else if (c+d<a+b && a+b<=21)//duplicated
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"I win"<<endl;
+    }
+    else if (a+b+f>c+d && a+b+f<=21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"I win"<<endl;   
+    }
+    else if (a+b+f+g>c+d && a+b+f+g<=21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<" "<<g<<endl;
+        cout<<"I win"<<endl; 
+    }
+    else if (c+d>a+b && c+d<=21)//duplicated
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"You win"<<endl;
+    }
+    else if (c+d+e>a+b && c+d+e<=21)//duplicated
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"You Win"<<endl;
+    }
+    else if (c+d+e>a+b+f+g && c+d+e<=21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<" "<<g<<endl;
+        cout<<"You Win"<<endl;
+    }
+    else if (c+d+e>a+b+f && c+d+e<=21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"You Win"<<endl;
+    }
+    else if (c+d+e>21)
+    {
+        cout<<"You scored higher than 21. You lose."<<endl;
+    }
+    else if (a+b==c+d+e || a+b==c+d)//duplicate
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"It's a draw."<<endl;
+    }
+    else if (a+b+f==c+d+e || a+b+f==c+d)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"It's a draw."<<endl;
+    }
+    else if (a+b+f+g==c+d+e || a+b+f+g==c+d)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<" "<<g<<endl;
+        cout<<"It's a draw."<<endl;
+    }
+   }
+  }
                             break;
                         }
                     }
@@ -102,8 +597,102 @@ int main(int argc, char** argv) {
             {
                 cout<<"player cards: \n"<<c
                 <<" "<<d<<endl;
+                if (a+b<=15)
+        {
+            a+b+f;
+            if (a+b+f<=15)
+            {
+                a+b+f+g;
+            
+        
+    if (a+b==21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"I win."<<endl;
+    }
+    else if (a+b+f==21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"I win."<<endl;
+    }
+    else if (a+b+f+g==21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<" "<<g<<endl;
+        cout<<"I win."<<endl;
+    }
+    else if(c+d==21 || c+d+e==21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"You Win."<<endl;
+    }
+    else if (c+d>a+b+f && c+d<=21)//
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"You win"<<endl;
+    }
+    else if (c+d>a+b+f+g && c+d<=21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"You win"<<endl;
+    }
+    else if (c+d<a+b && a+b<=21)//duplicated
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"I win"<<endl;
+    }
+    else if (a+b+f>c+d && a+b+f<=21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"I win"<<endl;   
+    }
+    else if (a+b+f+g>c+d && a+b+f+g<=21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<" "<<g<<endl;
+        cout<<"I win"<<endl; 
+    }
+    else if (c+d>a+b && c+d<=21)//duplicated
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"You win"<<endl;
+    }
+    else if (c+d+e>a+b && c+d+e<=21)//duplicated
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"You Win"<<endl;
+    }
+    else if (c+d+e>a+b+f+g && c+d+e<=21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<" "<<g<<endl;
+        cout<<"You Win"<<endl;
+    }
+    else if (c+d+e>a+b+f && c+d+e<=21)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"You Win"<<endl;
+    }
+    else if (c+d+e>21)
+    {
+        cout<<"You scored higher than 21. You lose."<<endl;
+    }
+    else if (a+b==c+d+e || a+b==c+d)//duplicate
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<endl;
+        cout<<"It's a draw."<<endl;
+    }
+    else if (a+b+f==c+d+e || a+b+f==c+d)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<endl;
+        cout<<"It's a draw."<<endl;
+    }
+    else if (a+b+f+g==c+d+e || a+b+f+g==c+d)
+    {
+        cout<<"Computer cards: "<<a<<" "<<b<<" "<<f<<" "<<g<<endl;
+        cout<<"It's a draw."<<endl;
+    }
+   }
+  }
                 break;
-            }
+            //}
         
         
         if (a+b<=15)
@@ -199,9 +788,10 @@ int main(int argc, char** argv) {
         cout<<"It's a draw."<<endl;
     }
    }
-  }       
+  }   
+                break;
 }
-        break;
+        }
     }
         case 2:
         {
@@ -213,11 +803,24 @@ int main(int argc, char** argv) {
         }while (choice2==1);
     return 0;
 }
+
 void mssg()
 {
     cout<<"Welcome to Blackjack!\nThe rules "
             <<"of the game are simple.\n"
             <<"Try to get to 21 without going over,\n"
             <<"and without going under the dealer "
-            <<"(that's me!) Ready? Let's Go!\n";
+            <<"(that's me!)\nReady? Let's Go!\n";
+}
+
+void uwin()
+{
+    cout<<"Congratulations, you won "
+            <<"the game! Would you "
+            <<"like to try again?\n";
+}
+void iwin()
+{
+    cout<<"I'm sorry, you lose. "
+            <<"Try again next time!\n";
 }
